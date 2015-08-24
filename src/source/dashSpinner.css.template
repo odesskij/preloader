@@ -1,0 +1,60 @@
+.<%= prefix %>wrapper {
+    z-index: 9999;
+    top: 50%;
+    left: 50%;
+    position: fixed;
+    margin-top: -<%= size*0.7/2 %>em;
+    margin-left: -<%= size/2 %>em;
+    opacity: 0;
+}
+.<%= prefix %>spinner {
+  width: <%= size %>em;
+  height: <%= size*0.7 %>em;
+  text-align: center;
+  font-size: 10px;
+}
+
+.<%= prefix %>spinner > div {
+  background-color: <%= color %>;
+  height: 100%;
+  width: 6px;
+  display: inline-block;
+
+  -webkit-animation: <%= prefix %>sk-stretchdelay 1.2s infinite ease-in-out;
+  animation: <%= prefix %>sk-stretchdelay 1.2s infinite ease-in-out;
+}
+
+.<%= prefix %>spinner .<%= prefix %>rect2 {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+
+.<%= prefix %>spinner .<%= prefix %>rect3 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+.<%= prefix %>spinner .<%= prefix %>rect4 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+
+.<%= prefix %>spinner .<%= prefix %>rect5 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+
+@-webkit-keyframes <%= prefix %>sk-stretchdelay {
+  0%, 40%, 100% { -webkit-transform: scaleY(0.4) }
+  20% { -webkit-transform: scaleY(1.0) }
+}
+
+@keyframes <%= prefix %>sk-stretchdelay {
+  0%, 40%, 100% {
+    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4);
+  }  20% {
+    transform: scaleY(1.0);
+    -webkit-transform: scaleY(1.0);
+  }
+}

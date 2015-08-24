@@ -1,0 +1,8 @@
+<div class="<%= prefix %>wrapper">
+  <div class="<%= prefix %>sk-folding-cube">
+    <div class="<%= prefix %>sk-cube1 <%= prefix %>sk-cube"></div>
+    <div class="<%= prefix %>sk-cube2 <%= prefix %>sk-cube"></div>
+    <div class="<%= prefix %>sk-cube3 <%= prefix %>sk-cube"></div>
+    <div class="<%= prefix %>sk-cube4 <%= prefix %>sk-cube"></div>
+  </div>
+</div>

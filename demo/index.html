@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript" src="./bower_components/requirejs/require.js"></script>
+    <script type="text/javascript" src="./bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript">
+        requirejs([], function () {
+            var current = 0;
+            var preloads = [
+                'bounce-spinner',
+                'dot-spinner',
+                'dash-spinner',
+                'cube-spinner',
+                'spinner',
+                'double-spinner',
+                'folding-cube',
+                'circle',
+                'cube-grid',
+                'fading-circle' ];
+            var next = (function () {
+                var preloader;
+                return function () {
+                    var preload = preloads[ current % preloads.length ];
+                    requirejs([ '../dist/preloader.' + preload ], function (Preloader) {
+                        var spinner = function () {
+                            preloader = new Preloader({
+                                el: $('.spinner'),
+                                size: 5
+                            });
+
+                            preloader.show();
+                            $('.info').fadeOut(400, function () {
+                                $('.info').html('requirejs([\'preloader.' + preload + '\'], function(Preloader) {<br/> &nbsp;&nbsp;&nbsp;var preload = new Preloader({<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;el: $(\'body\')<br/>&nbsp;&nbsp;&nbsp;})<br/>&nbsp;&nbsp;&nbsp;preload.show();<br/>})')
+                                $('.info').fadeIn();
+                            })
+
+                            current++;
+                        };
+                        if(preloader) {
+                            preloader.hide(function () {
+                                preloader.destroy();
+                                spinner()
+                            });
+                        }
+                        else {
+                            spinner();
+                        }
+
+                    });
+                };
+            })();
+            setInterval(next, 3000);
+            next()
+        });
+
+
+    </script>
+</head>
+<body style="
+    background-color: #edd061;
+    ">
+<div class="spinner">
+</div>
+<div class="info" style="
+    font-size: 2em;
+    font-family: monospace;
+    margin-top: 2em;
+    margin-left: 2em;
+    color: darkslateblue;
+    ">
+</div>
+</body>
+</html>

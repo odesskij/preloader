@@ -1,0 +1,6 @@
+<div class="<%= prefix %>wrapper">
+  <div class="<%= prefix %>spinner">
+    <div class="<%= prefix %>dot1"></div>
+    <div class="<%= prefix %>dot2"></div>
+  </div>
+</div>

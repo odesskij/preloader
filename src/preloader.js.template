@@ -1,0 +1,23 @@
+define([], function(){
+
+    <%= preloaderCode %>
+
+    (function(Preloader){
+        Preloader.prototype.styles = <%= styles %>;
+    })(Preloader);
+
+    (function(Preloader){
+        Preloader.prototype.html = <%= html %>;
+    })(Preloader);
+
+    (function(Preloader){
+        <%= tool %>
+    })(Preloader);
+
+    (function(Preloader){
+        <%= dom %>
+    })(Preloader);
+
+
+    return Preloader;
+})

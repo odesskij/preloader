@@ -1,0 +1,49 @@
+.<%= prefix %>wrapper {
+    z-index: 9999;
+    top: 50%;
+    left: 50%;
+    position: fixed;
+    margin-top: -<%= size/2 %>em;
+    margin-left: -<%= 3.5*size / 2 %>em;
+    opacity: 0;
+}
+.<%= prefix %>spinner {
+  width: <%= 3.5*size %>em;
+  text-align: center;
+}
+
+.<%= prefix %>spinner > div {
+  width: <%= size %>em;
+  height: <%= size %>em;
+  background-color: <%= color %>;
+
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: <%= prefix %>sk-bouncedelay 1.4s infinite ease-in-out both;
+  animation: <%= prefix %>sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.<%= prefix %>spinner .<%= prefix %>bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.<%= prefix %>spinner .<%= prefix %>bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+@-webkit-keyframes <%= prefix %>sk-bouncedelay {
+  0%, 80%, 100% { -webkit-transform: scale(0) }
+  40% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes <%= prefix %>sk-bouncedelay {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  } 40% {
+    -webkit-transform: scale(1.0);
+    transform: scale(1.0);
+  }
+}

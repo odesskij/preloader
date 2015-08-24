@@ -1,0 +1,7 @@
+<div class="<%= prefix %>wrapper">
+ <div class="<%= prefix %>spinner">
+   <div class="<%= prefix %>bounce1"></div>
+   <div class="<%= prefix %>bounce2"></div>
+   <div class="<%= prefix %>bounce3"></div>
+ </div>
+</div>

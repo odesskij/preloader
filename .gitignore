@@ -1,4 +1,5 @@
 .idea
 *.iml
 node_modules
-dist
+demo/bower_components
+dist/temp

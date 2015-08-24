@@ -1,0 +1,16 @@
+<div class="<%= prefix %>wrapper">
+  <div class="<%= prefix %>sk-circle">
+    <div class="<%= prefix %>sk-circle1 <%= prefix %>sk-child"></div>
+    <div class="<%= prefix %>sk-circle2 <%= prefix %>sk-child"></div>
+    <div class="<%= prefix %>sk-circle3 <%= prefix %>sk-child"></div>
+    <div class="<%= prefix %>sk-circle4 <%= prefix %>sk-child"></div>
+    <div class="<%= prefix %>sk-circle5 <%= prefix %>sk-child"></div>
+    <div class="<%= prefix %>sk-circle6 <%= prefix %>sk-child"></div>
+    <div class="<%= prefix %>sk-circle7 <%= prefix %>sk-child"></div>
+    <div class="<%= prefix %>sk-circle8 <%= prefix %>sk-child"></div>
+    <div class="<%= prefix %>sk-circle9 <%= prefix %>sk-child"></div>
+    <div class="<%= prefix %>sk-circle10 <%= prefix %>sk-child"></div>
+    <div class="<%= prefix %>sk-circle11 <%= prefix %>sk-child"></div>
+    <div class="<%= prefix %>sk-circle12 <%= prefix %>sk-child"></div>
+  </div>
+</div>

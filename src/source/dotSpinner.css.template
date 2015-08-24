@@ -1,0 +1,56 @@
+.<%= prefix %>wrapper {
+    z-index: 9999;
+    top: 50%;
+    left: 50%;
+    position: fixed;
+    margin-top: -<%= size/2 %>em;
+    margin-left: -<%= size/2 %>em;
+    opacity: 0;
+}
+.<%= prefix %>spinner {
+  width: <%= size %>em;
+  height: <%= size %>em;
+  position: relative;
+  text-align: center;
+
+  -webkit-animation: <%= prefix %>sk-rotate 2.0s infinite linear;
+  animation: <%= prefix %>sk-rotate 2.0s infinite linear;
+}
+
+.<%= prefix %>dot1, .<%= prefix %>dot2 {
+  width: 60%;
+  height: 60%;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  background-color: <%= color %>;
+  border-radius: 100%;
+
+  -webkit-animation: <%= prefix %>sk-bounce 2.0s infinite ease-in-out;
+  animation: <%= prefix %>sk-bounce 2.0s infinite ease-in-out;
+}
+
+.<%= prefix %>dot2 {
+  top: auto;
+  bottom: 0;
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+@-webkit-keyframes <%= prefix %>sk-rotate { 100% { -webkit-transform: rotate(360deg) }}
+@keyframes <%= prefix %>sk-rotate { 100% { transform: rotate(360deg); -webkit-transform: rotate(360deg) }}
+
+@-webkit-keyframes <%= prefix %>sk-bounce {
+  0%, 100% { -webkit-transform: scale(0.0) }
+  50% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bounce {
+  0%, 100% {
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 50% {
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+}
