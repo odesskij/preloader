@@ -1,0 +1,35 @@
+{
+  "name": "preloader-kit",
+  "version": "0.1.0",
+  "homepage": "https://github.com/odesskij/preloader",
+  "authors": [
+    "Vladimir Odesskij <odesskij1992@gmail.com>"
+  ],
+  "description": "Javascript preloader kit",
+  "moduleType": [
+    "amd"
+  ],
+  "main": [
+    "./dist/preloader.bounce-spinner.js",
+    "./dist/preloader.circle.js",
+    "./dist/preloader.cube-grid.js",
+    "./dist/preloader.cube-spinner.js",
+    "./dist/preloader.dash-spinner.js",
+    "./dist/preloader.dot-spinner.js",
+    "./dist/preloader.double-spinner.js",
+    "./dist/preloader.fading-circle.js",
+    "./dist/preloader.folding-cube.js",
+    "./dist/preloader.spinner.js"
+  ],
+  "keywords": [
+    "preloader"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
